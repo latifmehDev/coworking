@@ -1,0 +1,78 @@
+/* SearchBar.module.css */
+.searchForm {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+}
+
+.searchButton {
+  padding: 5px 10px;
+  background-color: #54d1a7; /* Lila Hintergrund */
+  color: #ffffff; /* Weisser Text/Symbolfarbe */
+  border: none;
+  border-radius: 0 9999px 9999px 0; /* Rundung nur auf der rechten Seite */
+  cursor: pointer;
+  position: absolute; /* Position absolut, damit sie über das Suchfeld gelegt wird */
+  right: 0; /* Rechtsbündig im Suchfeld-Container */
+  top: 50%; /* Zentriert vertikal */
+  transform: translateY(-50%); /* Korrektur der Zentrierung aufgrund der Höhe des Buttons */
+}
+
+.searchButton:hover {
+  background-color: #39d4a1; /* Dunkler Lila Hintergrund beim Hover */
+  color: rgb(255, 255, 255); /* Weißer Text/Symbolfarbe beim Hover */
+}
+
+.searchInput:focus {
+  background-color: rgba(111, 36, 196, 0.045);
+}
+
+.searchContainer {
+  flex-grow: 1;
+  /* Lässt den Container wachsen und den verfügbaren Platz einnehmen */
+  display: flex;
+  justify-content: center;
+  /* Zentriert das Kind-Element, das Suchfeld, horizontal */
+}
+
+.infoContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.infoContainer .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Positionierung direkt über dem infoContainer Element */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  /* Verschiebung um die Hälfte der Breite des Tooltip-Elements */
+
+  /* Fade-in Effekt */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.infoContainer:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s;
+  transition-delay: 1s; /* Verzögerung von 1 Sekunde */
+}
+
+.infoContainer:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s; /* Keine Verzögerung beim Ausblenden */
+}

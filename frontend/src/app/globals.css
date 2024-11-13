@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-content {
+  padding-top: 70px; /* Höhe Navigationsleiste */
+}
+
+:root{
+  --bg-main-color: @apply bg-cyan-100;
+}
+
+.main-bg-color{
+  background-color:#d6f4ea;
+}
+
+.button-color{
+  background-color:#54d1a7;
+}
+
+.button-color:hover{
+  background-color:#39d4a1;
+}
+
+.login-color:hover{
+  @apply text-cyan-300;
+}
+
+@media (prefers-color-scheme: dark) {
+  .custom-hover-text:hover {
+    @apply text-cyan-300;
+  }
+}
+/*
+@font-face {
+  font-family: 'MeineSchriftart';
+  src: url('./assets/fonts/SPEZIFISCHERFONT') format('woff2'),
+       url('/assets/MeineSchriftart.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*/

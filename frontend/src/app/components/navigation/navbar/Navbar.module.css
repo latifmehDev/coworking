@@ -1,0 +1,101 @@
+.navList {
+  display: none; /* Standardmäßig verstecken */
+  flex-direction: column; /* Elemente untereinander anordnen */
+  transition: all 0.3s ease; /* Weiche Übergangsanimation */
+  /* Weitere Styling-Optionen für das Menü */
+}
+
+.navList.show {
+  display: flex; /* Anzeigen, wenn das Menü geöffnet ist */
+  /* Animations- und Übergangseffekte hinzufügen, falls gewünscht */
+}
+
+.navbar {
+  max-width: 1800px; /* Maximale Breite des Inhalts */
+  background-color: #ffffff00;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+  
+.navList {
+  display: none; /* Standardmäßig verstecken */
+  flex-direction: column; /* Elemente untereinander anordnen */
+  gap: 1rem;
+}
+  
+.navList a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.navList a:hover {
+  background-color: #dbb9fe80;
+  color: #007BFF; /* Beispiel für eine Hover-Farbe */
+}
+
+.nav-link:hover{
+  color: #007BFF; /* Beispiel für eine Hover-Farbe */
+}
+
+.logo a {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .navList {
+    display: flex; /* Immer anzeigen auf Desktop */
+  }
+}
+
+.sidebar {
+  position: fixed; /* Positioniert die Sidebar über dem Inhalt */
+  top: 0;
+  right: -100%; /* Startet außerhalb des Bildschirms (rechts) */
+  height: 100%;
+  width: 250px; /* Oder die gewünschte Breite */
+  background: #f0f0f0; /* Hintergrundfarbe der Sidebar */
+  transition: right 0.3s ease; /* Glatter Übergangseffekt */
+  z-index: 20; /* höherer Z-Index für die Sidebar */
+  /* Weitere Stiloptionen... */
+}
+
+.sidebar.show {
+  right: 0; /* Verschiebt die Sidebar in die Anzeige */
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Halbtransparenter schwarzer Hintergrund */
+  z-index: 10; /* niedriger Z-Index für die Overlay-Div */
+  /*z-index: 1; /* Stellt sicher, dass es über anderen Elementen liegt */
+}
+
+.overlay.show {
+  display: block;
+}
+
+.navLinks {
+  list-style: none;
+  padding-top: 0.5%;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  justify-content: center; /* Zentriert die Elemente horizontal */
+  gap: 20px; /* Fügt einen Abstand zwischen den Elementen hinzu */
+}
+
+.navLinks li {
+  margin: 0; /* Entfernt eventuelle Standardmargen von Listenelementen */
+}

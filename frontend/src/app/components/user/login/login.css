@@ -1,0 +1,18 @@
+/* SearchBar.module.css */
+.registry-class {
+    margin-bottom: 2rem; /* entspricht mb-2 */
+    font-size: small; /* entspricht text-sm */
+    font-weight: 500; /* entspricht font-medium */
+    color: #1a202c; /* entspricht text-gray-900 */
+}
+
+/* Für den Dark-Modus, falls Sie einen Theme-Switcher oder eine ähnliche Logik verwenden */
+.registry-class.dark-mode {
+    color: white; /* entspricht dark:text-white */
+}
+
+.svg-hover-enlarge:hover {
+    transform: scale(1.1); /* Vergrößert das Element um 10% */
+    transition: transform 0.3s ease; /* Fügt eine sanfte Übergangsanimation hinzu */
+  }
+  

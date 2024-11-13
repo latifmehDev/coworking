@@ -1,0 +1,47 @@
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.category-item {
+  flex: 0 0 auto; /* Wichtig für das Scrollen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.category-item .icon {
+  font-size: 2rem;
+}
+
+.category-item .name {
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+/* Stil für die Scroll-Buttons */
+.scroll-wrapper > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/* Stil, um das Scrollen auf Mobilgeräten zu verbessern */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

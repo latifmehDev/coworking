@@ -1,0 +1,3 @@
+interface ImageURL {
+  imageURL: string;
+}
